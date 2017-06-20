@@ -1,11 +1,41 @@
-html,
-body
+*
 {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: #EBEBEB;
 }
+
+.containerScreen{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.carousel-slider {
+	height: 330px !important;
+}
+.containerImg{
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+}
+.carousel .indicators .indicator-item{
+	background-color: #f8f8f8;
+}
+.carousel .indicators .indicator-item.active {
+	background-color: #f64552;
+}
+.btn-large {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	background-color: #fbd43b;
+}
+
+/*
+** UTILITIES
+*/
 
 .center-box
 {
@@ -25,3 +55,27 @@ body
 }
 
 
+
+.rojoBullet{
+	color: #f64552;
+}
+.grisBullet{
+	color: #f8f8f8;
+}
+.bg-btn{
+	background-color: #fbd43b;
+}
+.grisDark{
+	color: #212121;
+}
+.grisLetraSoft{
+	color: #8f8f8f;
+}
+.terminosCondi{
+	color: #00c3a3;
+}
+.entradaNumber{
+	color: #49233b;
+}
+													/*Morado light : #451e36
+													Morado dark : #38052a*/
