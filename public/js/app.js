@@ -2,21 +2,17 @@
 
 function render(root) {
 	root.empty();
-	var wrapper = $('<div>',{
-		class: 'container'
-	});
 
-	var update = function () {
-		render(root);
-	};
+	var wrapper = $('<div class="container"></div>');
 
 	wrapper.append(Pantalla1(function () {
 		render(root);
 	}));
 
 	if(state.screen != null){
-		wrapper.append(Pantalla2());
-		root.append(wrapper);
+		wrapper.append(Pantalla2(function () {
+			render(root);
+		}));
 	}
 
 	/*wrapper

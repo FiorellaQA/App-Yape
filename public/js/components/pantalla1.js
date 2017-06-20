@@ -71,3 +71,4 @@ function Pantalla1 (update) {
 	return section;
 }
 
+

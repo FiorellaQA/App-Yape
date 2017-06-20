@@ -20,6 +20,11 @@
 	width: 150px;
 	height: 150px;
 }
+.containerImg2{
+	margin: 0 auto;
+	width: 120px;
+	height: 120px;
+}
 .carousel .indicators .indicator-item{
 	background-color: #f8f8f8;
 }
@@ -32,7 +37,26 @@
 	line-height: 45px;
 	background-color: #fbd43b;
 }
-
+.containerScreen2{
+	height:100vh;
+}
+.title{
+	font-size: 24px;
+	font-weight: 500;
+}
+.imgSmall{
+	width: 70px;
+}
+.contentInput{
+	border-bottom: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+input[type="number"] {
+	border-bottom: none;
+}
 /*
 ** UTILITIES
 */
