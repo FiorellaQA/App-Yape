@@ -8,12 +8,11 @@ function Pantalla2(update) {
 	var titulo = $('<h2 class="title center">Para comenzar validemos tu número</h2>');
 	var text = $('<p class="center">Recibirás un SMS con un código de validación.</p>');
 	var form = $('<form method="post" action=""></form>');
-	var contentInput = $('<div class="contentInput"></div>');
-	var iconPhone = $('<img class="responsive-img imgSmall" src="assets/img/icons/phoneandnumber.png" alt="">');
-	var input = $('<input type="number" id="phone" class="input-form" pattern="[9]{1}[0-9]{8}" required>');
-	var terminos = $('<input type="checkbox" id="terminos" />');
+	var contenedor = $('<div></div>');
+	var input = $('<input type="number" id="user-phone" class="bg-image" pattern="[9]{1}[0-9]{8}" required>');
+	var terminos = $('<input type="checkbox" class="filled-in" id="terminos" />');
 	var labelTerminos = $('<label for="terminos">Acepto los <a href="#">Términos y condiciones</a></label>');
-	var btn = $('<button type="submit" class="btn-large disabled" id="validarNumero">CONTINUAR</button>');
+	var btn = $('<button type="submit" class="btn btn-small disabled" id="validarNumero">CONTINUAR</button>');
 
 	containerImg.append(img);
 
@@ -21,15 +20,14 @@ function Pantalla2(update) {
 		.append(titulo)
 		.append(text);
 
+	contenedor
+		.append(input)
+		.append(terminos)
+		.append(labelTerminos);
 
-	contentInput
-		.append(iconPhone)
-		.append(input);
 
 	form
-		.append(contentInput)
-		.append(terminos)
-		.append(labelTerminos)
+		.append(contenedor)
 		.append(btn);
 
 	section

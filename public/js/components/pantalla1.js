@@ -10,21 +10,21 @@ function Pantalla1 (update) {
 	var img1 =$('<img class="responsive-img" src="assets/img/icons/icon-people.png" alt="">');
 
 	var contentText1 =  $('<div class="containerText"></div>');
-	var titulo1 = $('<h2>Paga a tus amigos</h2>');
+	var titulo1 = $('<h2 class="title">Paga a tus amigos</h2>');
 	var text1 =$('<p>Paga a quien quieras desde donde quieras, sin usar efectivo.</p>');
 
 	var item2 = $('<div class="carousel-item center" href="#two!"></div>');
 	var contentImg2 =  $('<div class="containerImg"></div>');
 	var img2 = $('<img class="responsive-img" src="assets/img/icons/happy-person.png" alt="">');
 	var contentText2 =  $('<div class="containerText"></div>');
-	var titulo2 = $('<h2>Sin número de cuenta</h2>');
+	var titulo2 = $('<h2 class="title">Sin número de cuenta</h2>');
 	var text2 =$('<p>Elige a quién pagar desde tu lista de contactos.</p>');
 
 	var item3 = $('<div class="carousel-item center" href="#three!"></div>');
 	var contentImg3 =  $('<div class="containerImg"></div>');
 	var img3 = $('<img class="responsive-img" src="assets/img/icons/group-people.png" alt="">');
 	var contentText3 =  $('<div class="containerText"></div>');
-	var titulo3 = $('<h2>Gratis y Seguro</h2>');
+	var titulo3 = $('<h2 class="title">Gratis y Seguro</h2>');
 	var text3 =$('<p>La transferencia es inmediata y gratuita de una cuenta a otra.</p>');
 
 	var btn = $('<button class="btn-large" id="btn-registro">Registrarme</button>');

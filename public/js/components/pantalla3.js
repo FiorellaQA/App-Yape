@@ -6,11 +6,10 @@ function Pantalla3 (update) {
 	var img = $('<img class="responsive-img" src="assets/img/icons/message.png" alt="">');
 	var contentText =  $('<div class=""></div>');
 	var titulo = $('<h2 class="title center">Ahora ingresa tu código</h2>');
-	var form = $('<form action=""></form>');
-	var text = $(`<p class="center">Enviamos un SMS con el código de validación al número <span class="bold">xxx</span></p>`);
-	var contentInput = $('<div class="contentInput"></div>');
-	var iconPhone = $('<img class="responsive-img imgSmall" src="assets/img/icons/lock.png" alt="">');
-	var input = $('<input type="number" id="phone" class="input-form" required>');
+	var text = $('<p class="center">Enviamos un SMS con el código de validación al número <span class="bold">xxx</span></p>');
+	var form = $('<div class="contentCode"></div>');
+	var input = $('<input type="number" id="user-code" placeholder="  - - - - - - " required>');
+	var span = $('<p>Reintentar en <span class="iconTime">20</span></p>');
 
 	containerImg.append(img);
 
@@ -18,11 +17,9 @@ function Pantalla3 (update) {
 		.append(titulo)
 		.append(text);
 
-	contentInput
-		.append(iconPhone)
-		.append(input);
-
-	form.append(contentInput);
+	form
+		.append(input)
+		.append(span);
 
 	section
 		.append(containerImg)
