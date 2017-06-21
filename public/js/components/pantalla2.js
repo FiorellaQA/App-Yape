@@ -1,6 +1,6 @@
 'use strict';
 
-function Pantalla2() {
+function Pantalla2(update) {
 	var section =  $('<section class="containerScreen"></section>');
 	var containerImg =  $('<div class="containerImg2"></div>');
 	var img = $('<img class="responsive-img" src="assets/img/icons/phone.png" alt="">');
@@ -53,7 +53,7 @@ function Pantalla2() {
 
 		$.post('http://localhost:3000/api/registerNumber',{
 			"phone" : input.val(),
-			"terms" : checkbox[0].checked
+			"terms" : $("#terminos").is(':checked')
 		}, function (data) {
 			console.log(data);
 		});
