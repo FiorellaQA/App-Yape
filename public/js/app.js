@@ -1,5 +1,7 @@
 'use strict';
+
 var datosUser = [];
+
 function render(root) {
 	root.empty();
 
@@ -19,9 +21,7 @@ function render(root) {
 		}));
 	}else if(state.screen == "pantalla4"){
 		console.log("aquiiii");
-		wrapper.append(Pantalla4(function () {
-			render(root);
-		}));
+		wrapper.append(Pantalla4());
 	}
 
 
@@ -38,6 +38,7 @@ function render(root) {
 
 var state = {
 	screen: null
+	//user: null
 };
 
 $(function() {

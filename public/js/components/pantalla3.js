@@ -7,7 +7,7 @@ function Pantalla3 (update) {
 	var contentText =  $('<div class=""></div>');
 	var titulo = $('<h2 class="title center">Ahora ingresa tu código</h2>');
 	var form = $('<form action=""></form>');
-	var text = $('<p class="center">Enviamos un SMS con el código de validación al número <span class="bold">xxxxx</span></p>');
+	var text = $(`<p class="center">Enviamos un SMS con el código de validación al número <span class="bold">xxx</span></p>`);
 	var contentInput = $('<div class="contentInput"></div>');
 	var iconPhone = $('<img class="responsive-img imgSmall" src="assets/img/icons/lock.png" alt="">');
 	var input = $('<input type="number" id="phone" class="input-form" required>');
@@ -31,15 +31,13 @@ function Pantalla3 (update) {
 
 	input.on('keyup',function (e) {
 		e.preventDefault();
+
 		if($(this).val().length == 6 && $(this).val() == datosUser[0]){
-			state.screeen = "pantalla4";
+			state.screen = "pantalla4";
 			update();
-			console.log("pasamos a la sgte pantalla automaticamente.");
 		}else{
-			console.log("codigo no coincide");
+			console.log("código no coincide");
 		}
 	});
-
-
 	return	section;
 }
