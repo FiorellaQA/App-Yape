@@ -47,6 +47,9 @@
 .imgSmall{
 	width: 70px;
 }
+.activeInput{
+	border-bottom: 1px solid yellow;
+}
 .contentInput{
 	border-bottom: 1px solid black;
 	display: flex;
@@ -54,6 +57,7 @@
 	flex-direction: row;
 	align-items: center;
 }
+
 input[type="number"] {
 	border-bottom: none;
 }

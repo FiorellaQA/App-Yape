@@ -29,12 +29,6 @@ function Pantalla1 (update) {
 
 	var btn = $('<button class="btn-large" id="btn-registro">Registrarme</button>');
 
-	btn.on('click',function (e) {
-		e.preventDefault();
-		state.screen = "pantalla2";
-		update();
-	});
-
 	contentImg1.append(img1);
 	contentText1
 		.append(titulo1)
@@ -67,6 +61,12 @@ function Pantalla1 (update) {
 	section
 		.append(containerCarousel)
 		.append(btn);
+
+	btn.on('click',function (e) {
+		e.preventDefault();
+		state.screen = "pantalla2";
+		update();
+	});
 
 	return section;
 }

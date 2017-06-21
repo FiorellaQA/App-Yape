@@ -5,15 +5,20 @@ function render(root) {
 
 	var wrapper = $('<div class="container"></div>');
 
-	wrapper.append(Pantalla1(function () {
-		render(root);
-	}));
-
-	if(state.screen != null){
+	if(state.screen == null) {
+		wrapper.append(Pantalla1(function () {
+			render(root);
+		}));
+	}else if(state.screen == "pantalla2"){
 		wrapper.append(Pantalla2(function () {
 			render(root);
 		}));
+	}else if(state.screen == "pantalla3"){
+		wrapper.append(Pantalla3(function () {
+			render(root);
+		}));
 	}
+
 
 	/*wrapper
 		.append(Pantalla2())
@@ -31,8 +36,11 @@ var state = {
 };
 
 $(function() {
-	var root = $('#root');
-	render(root);
-
-	$('.carousel.carousel-slider').carousel({fullWidth: true});
+	$.get('http://localhost:3000/api/',function(error, data){
+		state.user = data;
+		const root =$('#root');
+		render(root);
+		 console.log(data);
+		$('.carousel.carousel-slider').carousel({fullWidth: true});
+	});
 });
