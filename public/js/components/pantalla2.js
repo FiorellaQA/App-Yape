@@ -7,7 +7,7 @@ function Pantalla2(update) {
 	var contentText =  $('<div class=""></div>');
 	var titulo = $('<h2 class="title center">Para comenzar validemos tu número</h2>');
 	var text = $('<p class="center">Recibirás un SMS con un código de validación.</p>');
-	var form = $('<form action=""></form>');
+	var form = $('<form method="post" action=""></form>');
 	var contentInput = $('<div class="contentInput"></div>');
 	var iconPhone = $('<img class="responsive-img imgSmall" src="assets/img/icons/phoneandnumber.png" alt="">');
 	var input = $('<input type="number" id="phone" class="input-form" pattern="[9]{1}[0-9]{8}" required>');
@@ -55,9 +55,9 @@ function Pantalla2(update) {
 			"phone" : input.val(),
 			"terms" : $("#terminos").is(':checked')
 		}, function (data) {
-			console.log(data);
+			datosUser.push(data.data.code);
+			console.log(datosUser);
 		});
-
 		update();
 	});
 

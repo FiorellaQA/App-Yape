@@ -1,5 +1,5 @@
 'use strict';
-
+var datosUser = [];
 function render(root) {
 	root.empty();
 
@@ -15,6 +15,11 @@ function render(root) {
 		}));
 	}else if(state.screen == "pantalla3"){
 		wrapper.append(Pantalla3(function () {
+			render(root);
+		}));
+	}else if(state.screen == "pantalla4"){
+		console.log("aquiiii");
+		wrapper.append(Pantalla4(function () {
 			render(root);
 		}));
 	}
@@ -41,6 +46,8 @@ $(function() {
 		const root =$('#root');
 		render(root);
 		 console.log(data);
+		//req.body.phone;
 		$('.carousel.carousel-slider').carousel({fullWidth: true});
+
 	});
 });
