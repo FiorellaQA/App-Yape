@@ -47,7 +47,6 @@
 	background-size: contain;
 	background-position: 9px -2px;
 	background-repeat: no-repeat;
-	text-indent: 45px;
 	height: auto !important;
 }
 
@@ -66,6 +65,7 @@ input[type=email],
 input[type=password],
 input[type=number]
 {
+	text-align: center;
 	color: #49233b;
 	font-size: 14px;
 	font-weight: 400;
@@ -130,7 +130,6 @@ a
 	background-size: contain;
 	background-position: 9px -2px;
 	background-repeat: no-repeat;
-	text-indent: 25%;
 	height: auto !important;
 }
 
@@ -155,7 +154,6 @@ a
 	background-size: contain;
 	background-position: 9px -1px;
 	background-repeat: no-repeat;
-	text-indent: 45px;
 	height: auto!important;
 }
 
@@ -235,6 +233,46 @@ Style pantalla 5
 .imgCheck{
 	width: 124px;
 }
+
+/*
+Style pantalla 6
+ */
+#user-card{
+	background-image: url(../assets/img/icons/card.png);
+	line-height: 20px;
+	background-size: contain;
+	background-position: 9px -1px;
+	background-repeat: no-repeat;
+	height: auto!important;
+	margin-bottom: 12px;
+}
+.containerFecha{
+	width: 100%;
+	margin-top: 27px;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+input#exp_mes {
+
+	width: 50px;
+}
+
+input#exp_anio {
+	width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
 /*
 .imgSmall{
 	width: 70px;

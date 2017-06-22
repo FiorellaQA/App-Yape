@@ -26,7 +26,11 @@ function render(root) {
 			render(root);
 		}));
 	}else if(state.screen == "pantalla6"){
-		wrapper.append(Pantalla6());
+		wrapper.append(Pantalla6(function () {
+			render(root);
+		}));
+	}else if(state.screen == "pantalla7"){
+		wrapper.append(Pantalla7());
 	}
 	
 	root.append(wrapper);
