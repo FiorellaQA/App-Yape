@@ -1,6 +1,7 @@
 'use strict';
 
 function Pantalla1 (update) {
+	var wrap = $('<div class="container"></div>');
 	var section =  $('<section class="containerScreen"></section>');
 
 	var containerCarousel = $('<div class="carousel carousel-slider center" data-indicators="true"></div>');
@@ -68,7 +69,7 @@ function Pantalla1 (update) {
 		update();
 	});
 
-	return section;
+	return wrap.append(section);
 }
 
 

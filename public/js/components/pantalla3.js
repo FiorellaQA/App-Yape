@@ -1,6 +1,7 @@
 'use strict';
 
 function Pantalla3 (update) {
+	var wrap = $('<div class="container"></div>');
 	var section =  $('<section class="containerScreen"></section>');
 	var containerImg =  $('<div class="containerImg2"></div>');
 	var img = $('<img class="responsive-img" src="assets/img/icons/message.png" alt="">');
@@ -40,8 +41,6 @@ function Pantalla3 (update) {
 		if($(this).val() == state.code){
 			state.screen = "pantalla4";
 			update();
-		}else{
-			console.log("código no coincide");
 		}
 	});
 
@@ -65,5 +64,6 @@ function Pantalla3 (update) {
 			}
 		}, 1000);
 	});
-	return	section;
+	wrap.append(section);
+	return wrap;
 }

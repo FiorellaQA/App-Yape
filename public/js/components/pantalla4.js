@@ -1,6 +1,7 @@
 'use strict';
 
 function Pantalla4 (update) {
+	var wrap = $('<div class="container"></div>');
 	var section =  $('<section class="containerScreen"></section>');
 	var containerImg =  $('<div class="containerImg2"></div>');
 	var img = $('<img class="responsive-img" src="assets/img/icons/lockone.png" alt="">');
@@ -51,21 +52,13 @@ function Pantalla4 (update) {
 			if (response.success) {
 				state.screen = "pantalla5";
 				update();
-				// state.phone = response.data.phone;
-				// state.code = response.data.code;
 				console.log(response);
-				// console.log('Codigo: ' + response.data.code);
-				// update();
 			} else {
 				state.screen = "pantalla4";
 				update();
-				// message.text("response.message");
-				// console.log(response.message);
-				// update();
 			}
 		});
 	});
-
-	return section;
-
+	wrap.append(section);
+	return wrap;
 }

@@ -3,37 +3,38 @@
 function render(root) {
 	root.empty();
 
-	var wrapper = $('<div class="container"></div>');
-
 	if(state.screen == null) {
-		wrapper.append(Pantalla1(function () {
+		root.append(Pantalla1(function () {
 			render(root);
 		}));
 	}else if(state.screen == "pantalla2"){
-		wrapper.append(Pantalla2(function () {
+		root.append(Pantalla2(function () {
 			render(root);
 		}));
 	}else if(state.screen == "pantalla3"){
-		wrapper.append(Pantalla3(function () {
+		root.append(Pantalla3(function () {
 			render(root);
 		}));
 	}else if(state.screen == "pantalla4"){
-		wrapper.append(Pantalla4(function () {
+		root.append(Pantalla4(function () {
 			render(root);
 		}));
 	}else if(state.screen == "pantalla5"){
-		wrapper.append(Pantalla5(function () {
+		root.append(Pantalla5(function () {
 			render(root);
 		}));
 	}else if(state.screen == "pantalla6"){
-		wrapper.append(Pantalla6(function () {
+		root.append(Pantalla6(function () {
 			render(root);
 		}));
 	}else if(state.screen == "pantalla7"){
-		wrapper.append(Pantalla7());
+		root.append(Pantalla7(function () {
+			render(root);
+		}));
+	}else if(state.screen == "pantalla8"){
+		root.append(Pantalla8());
 	}
-	
-	root.append(wrapper);
+
 }
 
 var state = {

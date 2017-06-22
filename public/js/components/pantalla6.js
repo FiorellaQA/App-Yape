@@ -1,6 +1,7 @@
 'use strict';
 
 function Pantalla6 (update) {
+	var wrap = $('<div class="container"></div>');
 	var section =  $('<section class="containerScreen"></section>');
 	var containerImg =  $('<div class="containerImg2"></div>');
 	var img = $('<img class="responsive-img" src="assets/img/icons/bcp-logo.png" alt="">');
@@ -10,13 +11,13 @@ function Pantalla6 (update) {
 	var form = $('<div class="contentCode"></div>');
 	var input = $('<input type="text" id="user-card" maxlength="16" size="16" required>');
 	var containerTime = $('<div class="containerTime"></div>');
-	var p = $('<p>Escanear tarjeta</p>');
+	var p = $('<p class="turquesa">Escanear tarjeta</p>');
 	var imgclock = $('<img class="time" src="assets/img/icons/scan.png" alt="">');
 	var containerFecha = $('<div class="containerFecha"></div>');
 	var span = $('<span>Fecha de vencimiento</span>');
 	var inputMes = $('<input type="text" maxlength="2" size="2" id="exp_mes" placeholder="Mes">');
 	var inputAnio = $('<input type="text" maxlength="2" size="2" id="exp_anio" placeholder="Año">');
-	var btn = $('<button type="submit" class="btn btn-small disabled" id="btn">Crear cuenta</button>');
+	var btn = $('<button type="submit" class="btn btn-small disabled" id="btn">Continuar</button>');
 
 	containerImg.append(img);
 
@@ -87,5 +88,6 @@ function Pantalla6 (update) {
 		state.screen = "pantalla7";
 		update();
 	});
-	return section;
+	wrap.append(section);
+	return wrap;
 }

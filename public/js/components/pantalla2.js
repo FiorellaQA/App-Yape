@@ -1,6 +1,7 @@
 'use strict';
 
 function Pantalla2(update) {
+	var wrap = $('<div class="container"></div>');
 	var section =  $('<section class="containerScreen"></section>');
 	var containerImg =  $('<div class="containerImg2"></div>');
 	var img = $('<img class="responsive-img" src="assets/img/icons/phone.png" alt="">');
@@ -69,5 +70,6 @@ function Pantalla2(update) {
 			}
 		});
 	});
-	return section;
+	wrap.append(section);
+	return wrap;
 }
