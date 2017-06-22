@@ -1,7 +1,5 @@
 'use strict';
 
-var datosUser = [];
-
 function render(root) {
 	root.empty();
 
@@ -23,22 +21,14 @@ function render(root) {
 		console.log("aquiiii");
 		wrapper.append(Pantalla4());
 	}
-
-
-	/*wrapper
-		.append(Pantalla2())
-		.append(Pantalla3())
-		.append(Pantalla4())
-		.append(Pantalla5())
-		.append(Pantalla6())
-		.append(Pantalla7());*/
-
+	
 	root.append(wrapper);
 }
 
 var state = {
-	screen: null
-	//user: null
+	screen: null,
+	phone: null,
+	code: null
 };
 
 $(function() {
@@ -47,7 +37,6 @@ $(function() {
 		const root =$('#root');
 		render(root);
 		 console.log(data);
-		//req.body.phone;
 		$('.carousel.carousel-slider').carousel({fullWidth: true});
 
 	});

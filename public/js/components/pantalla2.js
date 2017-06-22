@@ -4,7 +4,7 @@ function Pantalla2(update) {
 	var section =  $('<section class="containerScreen"></section>');
 	var containerImg =  $('<div class="containerImg2"></div>');
 	var img = $('<img class="responsive-img" src="assets/img/icons/phone.png" alt="">');
-	var contentText =  $('<div class=""></div>');
+	var contentText =  $('<div></div>');
 	var titulo = $('<h2 class="title center">Para comenzar validemos tu número</h2>');
 	var text = $('<p class="center">Recibirás un SMS con un código de validación.</p>');
 	var form = $('<form method="post" action=""></form>');
@@ -12,6 +12,7 @@ function Pantalla2(update) {
 	var input = $('<input type="number" id="user-phone" class="bg-image" pattern="[9]{1}[0-9]{8}" required>');
 	var terminos = $('<input type="checkbox" class="filled-in" id="terminos" />');
 	var labelTerminos = $('<label for="terminos">Acepto los <a href="#">Términos y condiciones</a></label>');
+	var message = $('<p></p>');
 	var btn = $('<button type="submit" class="btn btn-small disabled" id="validarNumero">CONTINUAR</button>');
 
 	containerImg.append(img);
@@ -28,6 +29,7 @@ function Pantalla2(update) {
 
 	form
 		.append(contenedor)
+		.append(message)
 		.append(btn);
 
 	section
@@ -47,18 +49,25 @@ function Pantalla2(update) {
 
 	btn.on('click',function (e) {
 		e.preventDefault();
-		state.screen = "pantalla3";
 
-		$.post('http://localhost:3000/api/registerNumber',{
-			"phone" : input.val(),
-			"terms" : $("#terminos").is(':checked')
-		}, function (data) {
-			datosUser.push(data.data.code);
-			console.log(datosUser);
+		$.post('/api/registerNumber',{
+			phone: input.val(),
+			terms: $("#terminos").is(':checked')
+		},function(response){
+			if (response.success) {
+				state.screen = "pantalla3";
+				state.phone = response.data.phone;
+				state.code = response.data.code;
+				console.log(response.success);
+				console.log('Codigo: ' + response.data.code);
+				update();
+			} else {
+				state.screen = "pantalla2";
+				message.text("response.message");
+				console.log(response.message);
+				update();
+			}
 		});
-		update();
 	});
-
 	return section;
-
 }
