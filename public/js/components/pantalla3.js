@@ -56,10 +56,9 @@ function Pantalla3 (update) {
 					phone: state.phone
 				},function(response){
 					if (response.success) {
-						state.screen = "pantalla3";
+						//state.screen = "pantalla4";
 						state.code = response.data;
 						console.log('Codigo: ' + state.code);
-						update();
 					}
 				});
 				clearInterval(interval);

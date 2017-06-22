@@ -35,7 +35,6 @@
 
 .btn-small
 {
-	width: 50%;
 	height: 45px;
 	line-height: 45px;
 	background-color: #fbd43b;
@@ -58,7 +57,7 @@ form
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 218px;
+	height: 218px; /*324px;*/
 	width: 90%;
 }
 
@@ -68,8 +67,8 @@ input[type=password],
 input[type=number]
 {
 	color: #49233b;
-	font-size: 16px;
-	font-weight: 500;
+	font-size: 14px;
+	font-weight: 400;
 }
 
 input[type=number]:focus:not([readonly]),
@@ -181,7 +180,7 @@ a
 	width: 17px;
 	margin: 0 2px;
 }
-}
+
 /*
 * Style Pantalla 4
 */
@@ -199,13 +198,44 @@ a
 #user-password
 {
 	background-image: url(../assets/img/icons/lock.png);
+	margin-bottom: 0;
+}
+
+form#datos
+{
+	margin-top: 35px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 324px;
+	width: 90%;
 }
 
 /*
-.containerScreen2{
-	height:100vh;
+Style pantalla 5
+ */
+.containerSuccess{
+	display: flex;
+	/* justify-content: center; */
+	flex-direction: column;
+	align-items: center;
 }
 
+.containerScreen2{
+	width: 100%;
+	/* background-color: yellow; */
+	color: #49233b;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	/* flex-direction: column; */
+}
+
+.imgCheck{
+	width: 124px;
+}
+/*
 .imgSmall{
 	width: 70px;
 }

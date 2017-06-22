@@ -18,8 +18,15 @@ function render(root) {
 			render(root);
 		}));
 	}else if(state.screen == "pantalla4"){
-		console.log("aquiiii");
-		wrapper.append(Pantalla4());
+		wrapper.append(Pantalla4(function () {
+			render(root);
+		}));
+	}else if(state.screen == "pantalla5"){
+		wrapper.append(Pantalla5(function () {
+			render(root);
+		}));
+	}else if(state.screen == "pantalla6"){
+		wrapper.append(Pantalla6());
 	}
 	
 	root.append(wrapper);
